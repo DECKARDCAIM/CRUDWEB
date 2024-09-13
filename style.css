@@ -1,0 +1,110 @@
+/* General */
+body {
+    background-color: rgb(219, 219, 219);
+}
+
+header {
+    background-color: #007bff;
+}
+
+.search-bar input {
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #343a40;
+}
+
+
+footer h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    height: 500px;  /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 200px;  /* Altura fija para las imágenes */
+    object-fit: cover;
+}
+
+.card-body {
+    overflow: hidden;  /* Oculta cualquier contenido que exceda el tamaño del card-body */
+    flex-grow: 1;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;  /* Limita el texto a 3 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.carousel-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Negro con 50% de transparencia */
+    z-index: 1; /* Asegúrate de que no esté por encima de los controles o texto */
+}
+
+#cartelera-title { /* Asegúrate de asignar este ID al elemento del título */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 20px; /* Ajusta el espacio superior según necesites */
+}
+
+.modal input,
+.modal textarea {
+    color: #333; /* Cambia #333 por el código de color que prefieras */
+}
+
+.modal .btn-primary {
+    color: #fff; /* Asegúrate de que el texto se vea, eligiendo un color contrastante con el fondo */
+}
+
+.modal .btn-secondary {
+    color: #ffffff; /* Ajusta el color según el fondo del botón */
+}
+
+.modal label {
+    color: #555; /* Cambia #555 por el código de color que prefieras */
+}
+
+#detailsModal .modal-body,
+#detailsModal .modal-body input,
+#detailsModal .modal-body textarea,
+#detailsModal .modal-body label {
+    color: #000; /* Establece el color de texto a negro */
+}
+#detailsModal .modal-header h5,
+#detailsModal .modal-body h5,
+#detailsModal .modal-footer h5 {
+    color: #333; /* Ajusta el color a un tono más oscuro para mejorar la visibilidad */
+}
