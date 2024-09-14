@@ -1,4 +1,3 @@
-/* General */
 body {
     background-color: rgb(219, 219, 219);
 }
@@ -11,15 +10,16 @@ header {
     width: 100%;
 }
 
-.carousel-item img {
+.carousel-item img,
+.card-img-top {
     height: 400px;
     object-fit: cover;
+    width: 100%;
 }
 
 footer {
     background-color: #343a40;
 }
-
 
 footer h5 {
     font-size: 18px;
@@ -41,28 +41,28 @@ footer ul li a:hover {
 }
 
 .card {
-    height: 500px;  /* Altura fija para todas las tarjetas */
     display: flex;
     flex-direction: column;
-}
-
-.card-img-top {
-    height: 200px;  /* Altura fija para las imágenes */
-    object-fit: cover;
+    height: 100%;
 }
 
 .card-body {
-    overflow: hidden;  /* Oculta cualquier contenido que exceda el tamaño del card-body */
-    flex-grow: 1;
+    flex: 1;
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-text {
     display: -webkit-box;
-    -webkit-line-clamp: 3;  /* Limita el texto a 3 líneas */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .carousel-item::before {
     content: "";
     display: block;
@@ -71,40 +71,61 @@ footer ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Negro con 50% de transparencia */
-    z-index: 1; /* Asegúrate de que no esté por encima de los controles o texto */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
-#cartelera-title { /* Asegúrate de asignar este ID al elemento del título */
-    text-align: center; /* Centra el texto horizontalmente */
-    margin-top: 20px; /* Ajusta el espacio superior según necesites */
+#cartelera-title {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .modal input,
-.modal textarea {
-    color: #333; /* Cambia #333 por el código de color que prefieras */
-}
-
-.modal .btn-primary {
-    color: #fff; /* Asegúrate de que el texto se vea, eligiendo un color contrastante con el fondo */
-}
-
-.modal .btn-secondary {
-    color: #ffffff; /* Ajusta el color según el fondo del botón */
-}
-
-.modal label {
-    color: #555; /* Cambia #555 por el código de color que prefieras */
-}
-
+.modal textarea,
+.modal label,
 #detailsModal .modal-body,
 #detailsModal .modal-body input,
 #detailsModal .modal-body textarea,
 #detailsModal .modal-body label {
-    color: #000; /* Establece el color de texto a negro */
+    color: #333;
 }
-#detailsModal .modal-header h5,
-#detailsModal .modal-body h5,
-#detailsModal .modal-footer h5 {
-    color: #333; /* Ajusta el color a un tono más oscuro para mejorar la visibilidad */
+
+.modal .btn-primary {
+    color: #fff;
+}
+
+.modal .btn-secondary {
+    color: #ffffff;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e1e1e1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-footer .btn:hover {
+    background-color: #ffe0e0;
+    color: rgb(49, 44, 44);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#detailsModal .modal-content {
+    color: #000;
+}
+
+#detailsModal h5,
+#detailsModal p {
+    color: #000;
+}
+
+#detailsModal .modal-content {
+    color: #000;
 }
